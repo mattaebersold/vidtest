@@ -1,0 +1,11 @@
+title: 'nwmdnt'
+blocks:
+  -
+    __typename: 'simpleMarquee'
+    block:
+      bg: '/imgs/bg.jpg'
+      logo: '/imgs/logo.png'
+      buttons:
+        -
+          label: '?'
+          to: 'mailto:matt@partstash.com'
