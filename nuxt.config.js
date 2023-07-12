@@ -14,7 +14,7 @@ export default {
 	// Cloak settings
 	cloak: {
 		boilerplate: {
-			siteName: 'mdnt',
+			siteName: 'vidtest',
 			// polyfills: ['default']
 		},
 	},

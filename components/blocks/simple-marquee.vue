@@ -4,20 +4,11 @@
 
 section.simple-marquee
 
-	cloak-visual.bg(
-		sizes='100vw'
-		:image='block.bg'
-		object-fit='cover')
+	video(autoplay muted)
+		source(:src='block.video' type="video/mp4")
 
 	div
-		cloak-visual.logo(
-			sizes='300px'
-			:image='block.logo')
-
-		//- Optional list of buttons
-		.buttons(v-if='block.buttons.length'): btn-craft(
-			v-for='button in block.buttons' :key='button.id'
-			:button='button')
+		h1 {{ block.title }}
 
 </template>
 
@@ -27,6 +18,14 @@ section.simple-marquee
 export default
 
 	props: block: Object
+
+	computed:
+		video: -> [
+			landscape: [
+				mimeType: "video/mp4"
+				url: @block.video
+			]
+		]
 
 </script>
 
@@ -73,9 +72,11 @@ export default
 	.vv-wrapper, .vv-picture, img
 		height 100%
 
-.logo
+h1
 	position relative
 	z-index 2
+	font-size 100px
+	color magenta
 
 // Optional buttons
 .buttons
@@ -86,5 +87,15 @@ export default
 	// Push away from copy
 	&:not(:first-child)
 		fluid-space margin-top, 's'
+
+video
+	position absolute
+	z-index 0
+	object-fit cover
+	width 100%
+	height 100%
+	top 50%
+	left 50%
+	transform translate(-50%, -50%)
 
 </style>

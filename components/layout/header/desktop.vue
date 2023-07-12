@@ -8,7 +8,7 @@ detachable-header.layout-header-desktop(:height='height')
 			//- Left aligned links
 
 		.center
-			nuxt-link(to='/') mdnt
+			nuxt-link(to='/') vidtest
 
 		.right
 			//- Right aligned links

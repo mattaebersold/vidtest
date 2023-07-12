@@ -6,7 +6,7 @@ detachable-header.layout-header-mobile(:height='height')
 	header.max-w-full: .columns.max-w-m
 
 		.left
-			nuxt-link(to='/') mdnt
+			nuxt-link(to='/') vidtest
 
 		.right
 			//- Probably a hamburger

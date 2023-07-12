@@ -1,11 +1,15 @@
-title: 'nwmdnt'
+title: 'vidtest'
 blocks:
   -
     __typename: 'simpleMarquee'
     block:
+      title: '720p'
       bg: '/imgs/bg.jpg'
-      logo: '/imgs/logo.png'
-      buttons:
-        -
-          label: '?'
-          to: 'mailto:matt@partstash.com'
+      video: '/vids/720.mp4'
+
+  -
+    __typename: 'simpleMarquee'
+    block:
+      title: '1080p'
+      bg: '/imgs/bg.jpg'
+      video: '/vids/1080.mp4'
